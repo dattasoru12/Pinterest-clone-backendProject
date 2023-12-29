@@ -1,0 +1,28 @@
+
+<% include ./partials/header.ejs%>
+
+
+  <div class="w-full min-h-screen bg-zinc-800 px-10 py-8 text-white bg-[url(https://images.unsplash.com/photo-1579547944963-bb18d21c396a?q=80&w=1878&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] ">
+    <div class="cards flex flex-wrap gap-10">
+
+<% posts.forEach(function(elem){ %>
+
+    <div class="card w-32">
+        <div class=" w-32 h-40 bg-sky-200 rounded-lg bg-zinc-700   overflow-hidden">
+      <img src="/images/uploads/<%= elem.image %>" alt="">
+
+  </div>
+  <h5 href="/show/posts" class="mt-2 text-sm"><%= elem.title %></h5>
+  <h6 class="text-xs font-semibold  opacity-500">@<%= elem.user.username %></h6>
+  </div>
+
+<%})%>
+
+
+      
+    </div>
+  </div>
+
+
+ 
+<% include ./partials/footer.ejs%>
